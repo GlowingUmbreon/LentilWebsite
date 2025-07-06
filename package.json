@@ -1,0 +1,11 @@
+{
+  "scripts": {
+		"deploy": "wrangler deploy"
+	},
+	"devDependencies": {
+    "wrangler": "^4.23.0"
+  },
+  "dependencies": {
+    "lucide-static": "^0.525.0"
+  }
+}

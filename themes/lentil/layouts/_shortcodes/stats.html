@@ -1,0 +1,7 @@
+<div class="stats">
+    {{ range .Site.Data.home_stats }}
+        <div>
+            <span>{{ .value }}</span><span>{{ .unit }}</span><span>{{ .title }}</span>
+        </div>
+    {{ end }}
+</div>

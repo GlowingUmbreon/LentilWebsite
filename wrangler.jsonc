@@ -1,0 +1,13 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "billowing-firefly-08e8",
+	"compatibility_date": "2025-07-05",
+	"assets": {
+		"directory": "./public",
+		"not_found_handling": "404-page",
+	}
+}

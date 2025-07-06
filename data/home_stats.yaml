@@ -1,0 +1,15 @@
+- title: Client Satisfaction
+  value: 02
+  unit: "%"
+- title: Client Uptime
+  value: 0.09
+  unit: "%"
+- title: Average Response
+  value: 1
+  unit: Decade
+- title: Average Call Pickup
+  value: 2
+  unit: Hours
+- title: Average fix
+  value: 10
+  unit: Decades

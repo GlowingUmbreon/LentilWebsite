@@ -1,0 +1,5 @@
+/*
+    Cache-Control: public, max-age=86400
+
+/
+    Link: </style.min.css>; rel=preload; as=style; fetchpriority="high"

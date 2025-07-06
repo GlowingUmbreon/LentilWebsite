@@ -1,0 +1,10 @@
+{{with resources.Get "colors.css" | minify }} <!--{{.RelPermalink}}--> {{end}}
+{{- with resources.Get "style.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" rel="preload" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify }}
+      <link rel="stylesheet" rel="preload" href="{{ .RelPermalink }}">
+    {{- end }}
+  {{- end }}
+{{- end }}
