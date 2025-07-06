@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-GB'
-title = 'My New Hugo Site'
+title = 'Lentil Theme'
 
 [module]
   [module.hugoVersion]

@@ -1,3 +1,6 @@
 /public
 /node_modules
-/billowing-firefly-08e8
+/.wrangler
+/hugo_stats.json
+/.hugo_build.lock
+/resources

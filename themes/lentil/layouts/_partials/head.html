@@ -1,13 +1,9 @@
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 {{ if .Description}}<meta name="description" content="{{.Description}}">{{end}}
-{{ with resources.Get "icon.svg" }}
-    <link rel="icon" href="{{ .RelPermalink }}" />
-{{ end }}
+{{ with resources.Get "icon.svg" }}<link rel="icon" href="{{ .RelPermalink }}" />{{ end }}
 
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-<!--{{ partialCached "head/js.html" . }}-->
-<!--<link rel="preconnect" href="https://rsms.me/">
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css">-->
-<script src="https://unpkg.com/lucide@latest"></script>
+<!-- CSS -->
+{{- $css := slice (resources.Get "css/colors.css") (resources.Get "css/main.css") (resources.Get "css/colors_classes.css")  | resources.Concat "style.css" | postCSS | minify }}
+<link rel="stylesheet" rel="preload" href="{{ $css.RelPermalink }}">

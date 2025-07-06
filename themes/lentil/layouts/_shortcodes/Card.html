@@ -1,7 +1,7 @@
 {{ $color := .Get "color"}}
 {{ $icon := .Get "icon"}}
 
-<div class="card" style="--color: var(--{{$color}}-500); --color-muted: var(--{{$color}}-200); --color-muted2: var(--{{$color}}-10)">
+<div class="card {{$color}}">
     <span>
         {{ with resources.Get $icon}}
             {{ .Content | safeHTML }}

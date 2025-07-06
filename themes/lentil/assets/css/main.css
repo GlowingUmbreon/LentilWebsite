@@ -1,11 +1,13 @@
-@import url("colors.min.css");
-
 :root {
-    background-color: var(--green-10);
-    background-image: linear-gradient(var(--green-100), var(--green-10) 25vh);
+    --max-width: 1440px;
+    background-color: var(--color-10);
+    background-image: linear-gradient(var(--color-200), var(--color-10) 10em);
     background-repeat: no-repeat;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--foreground);
+    color: black;
+
+    --shadow: drop-shadow(-2px 2px 5px #000000aa);
+    --shadow2: drop-shadow(-5px 5px 7px #00000099)
 }
 
 body {
@@ -18,16 +20,19 @@ header {
     top: 0;
     z-index: 100;
     background-color: white;
-    border-bottom: solid var(--green-400) 1px;
+    border-bottom: solid var(--color-400) 1px;
     margin-bottom: 1em;
     height: 3em;
+
+    filter: var(--shadow);
+
 
     div {
         display: flex;
         justify-content: space-between;
         height: 100%;
         width: 100%;
-        max-width: 1440px;
+        max-width: var(--max-width);
         margin-left: auto;
         margin-right: auto;
 
@@ -42,7 +47,7 @@ header {
                 padding: 0;
 
                 li {
-                    color: var(--green-6500);
+                    color: var(--color-600);
                     display: inline-block;
                     margin-left: 2em;
                     font-size: large;
@@ -57,11 +62,15 @@ header {
 }
 
 main {
-    max-width: 1440px;
+    max-width: var(--max-width);
     margin: auto;
 }
 
-footer {}
+footer {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-top: 2em;
+}
 
 .split {
     display: flex;
@@ -107,14 +116,19 @@ footer {}
 }
 
 .card {
-    background-color: var(--color-muted2);
-    border: solid var(--color);
+    background-color: var(--color-10);
+    border: solid var(--color-500);
     display: inline-flex;
     flex-direction: column;
     padding: 1.5rem;
     border-radius: .5rem;
 
-    filter: drop-shadow(-3px 3px 5px #000000aa);
+    filter: var(--shadow);
+    & :hover {
+        filter: var(--shadow2)
+    }
+    transition-property: filter;
+    transition-duration: 0.2s;
 
     svg {
         width: 100%;
@@ -123,9 +137,9 @@ footer {}
 
     > :nth-child(1) {
         padding: 16px;
-        background-color: var(--color-muted);
+        background-color: var(--color-200);
         border-radius: 8px;
-        color: var(--color);
+        color: var(--color-500);
         justify-content: center;
         align-content: center;
         width: 2rem;
@@ -135,7 +149,7 @@ footer {}
     > :nth-child(2) {
         font-size: x-large;
         font-weight: bold;
-        color: var(--color)
+        color: var(--color-500)
     }
 }
 
