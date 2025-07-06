@@ -26,6 +26,16 @@ header {
     height: 3em;
 
     filter: var(--shadow);
+    :link {
+        color: blue;
+    }
+    :visited {
+        color: green;
+    }
+    /* This is currently not implemented in any browsers */
+    :local-link {
+        color: red !important;
+    }
 
     padding: 0 var(--padding);
     div {
@@ -69,10 +79,17 @@ main {
 }
 
 footer {
-    max-width: var(--max-width);
-    padding: 0 var(--padding);
-    margin: auto;
     margin-top: 2em;
+
+    background-color: var(--color-100);
+
+    div {
+    margin: auto;
+    display: flex;
+
+        max-width: var(--max-width);
+        padding: 0 var(--padding);
+    }
 }
 
 .split {

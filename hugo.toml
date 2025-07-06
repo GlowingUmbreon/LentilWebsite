@@ -8,6 +8,8 @@ copyright = '© KeBab Technologies Ltd'
 # Custom Variables
 [params]
   defaultColor = "green"
+  [params.contact]
+    
 
 [module]
   [[module.mounts]]

@@ -5,10 +5,10 @@ date = 2023-01-01T08:00:00-07:00
 draft = false
 +++
 
-<!--{{< hero
-    head="IT Support for Earth, Space & Beyond" 
-    subhead="One Call for IT Needs at a Hourly Cost"
->}}-->
+{{< hero
+    head="Reliable IT Partnership That Just Works" 
+    subhead="From cyber security to managed IT, we deliver enterprise-grade solutions tailored for education, charity, and growing businesses across Norfolk and Suffolk."
+>}}
 
 {{<grid>}}
 {{< Card
