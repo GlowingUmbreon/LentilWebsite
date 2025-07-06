@@ -14,43 +14,49 @@ draft = false
 {{< Card
     color="sky"
     icon="icons/circle-check.svg"
+    label="Assurance"
+    sublabel="Certification & Compliance"
 >}}
+* Cyber Essentials
+* IASME Cyber Assurance
+* NHS DSP Toolkit
+* ISO 27001 Audits
+* GDPR Compliance
+{{</ Card >}}
 {{< Card
     color="green"
     icon="icons/eye.svg"
+    label="Detection"
+    sublabel="24×7 Threat Monitoring"
 >}}
+* Managed Detection (MDR)
+* Extended Detection (XDR)
+* Email Threat Detection
+* Network Monitoring
+* Cloud Security Watch
+{{</ Card >}}
 {{< Card
     color="amber"
     icon="icons/zap.svg"
+    label="Response"
+    sublabel="Rapid Incident Handling"
 >}}
+* Incident Response
+* Digital Forensics
+* Malware Analysis
+* System Remediation
+* Recovery Planning
+{{</ Card >}}
 {{< Card
     color="red"
     icon="icons/shield.svg"
+    label="Protection"
+    sublabel="Proactive Defense"
 >}}
-
-{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}{{< Card
-    color="sky"
-    icon="icons/circle-check.svg"
->}}
+* Endpoint Protection
+* Firewall Management
+* Identity Protection
+* Vulnerability Mgmt
+* Secure-by-Design
+{{</ Card >}}
 {{</grid>}}

@@ -16,6 +16,6 @@ const purgecss = purgeCSSPlugin({
 
 module.exports = {
     plugins: [
-        process.env.HUGO_ENVIRONMENT !== 'development' ? purgecss : null,
+        /*process.env.HUGO_ENVIRONMENT !== 'development' ? purgecss : null,*/
     ]
 };

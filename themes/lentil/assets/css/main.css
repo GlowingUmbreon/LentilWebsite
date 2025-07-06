@@ -1,11 +1,12 @@
 :root {
-    --max-width: 1440px;
     background-color: var(--color-10);
     background-image: linear-gradient(var(--color-200), var(--color-10) 10em);
     background-repeat: no-repeat;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: black;
 
+    --max-width: 1440px;
+    --padding: 1rem;
     --shadow: drop-shadow(-2px 2px 5px #000000aa);
     --shadow2: drop-shadow(-5px 5px 7px #00000099)
 }
@@ -26,7 +27,7 @@ header {
 
     filter: var(--shadow);
 
-
+    padding: 0 var(--padding);
     div {
         display: flex;
         justify-content: space-between;
@@ -63,11 +64,13 @@ header {
 
 main {
     max-width: var(--max-width);
+    padding: 0 var(--padding);
     margin: auto;
 }
 
 footer {
     max-width: var(--max-width);
+    padding: 0 var(--padding);
     margin: auto;
     margin-top: 2em;
 }
@@ -122,6 +125,7 @@ footer {
     flex-direction: column;
     padding: 1.5rem;
     border-radius: .5rem;
+    align-items: center;
 
     filter: var(--shadow);
     & :hover {
@@ -144,6 +148,7 @@ footer {
         align-content: center;
         width: 2rem;
         height: 2rem;
+        margin-bottom: 1rem;
     }
 
     > :nth-child(2) {
@@ -151,9 +156,14 @@ footer {
         font-weight: bold;
         color: var(--color-500)
     }
+
+    ul {
+        line-height: 1.5rem;    
+    }
 }
 
 .grid {
     display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 2rem;
 }
