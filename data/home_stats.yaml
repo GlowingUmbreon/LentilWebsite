@@ -1,15 +1,10 @@
 - title: Client Satisfaction
-  value: 02
-  unit: "%"
+  value: "99%"
 - title: Client Uptime
-  value: 0.09
-  unit: "%"
+  value: "99.99%"
 - title: Average Response
-  value: 1
-  unit: Decade
+  value: "30 min"
 - title: Average Call Pickup
-  value: 2
-  unit: Hours
+  value: "9 sec"
 - title: Average fix
-  value: 10
-  unit: Decades
+  value: "4 hr"

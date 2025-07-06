@@ -1,0 +1,7 @@
+{{ $color := .Get "color"}}
+
+<section style="background-color: var(--{{$color}})">
+    <div>
+        {{ .Inner }}
+    </div>
+</section>

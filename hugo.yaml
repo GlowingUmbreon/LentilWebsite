@@ -1,0 +1,66 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-gb'
+defaultContentLanguage: 'en-gb'
+title: 'Galactic IT'
+theme: "lentil"
+copyright: '© Lentil Technologies Ltd'
+
+# Custom Variables
+params:
+  defaultColor: "green"
+  address:
+    - Galactic IT, Whugh Road
+      Andromida, Mily Way
+      AB1 C23
+  contact:
+    support:
+      phone: "00000 000000"
+      email: "support@GalacticIT.co.uk"
+    enquiries:
+      phone: "00000 000000"
+      email: "hello@GalacticIT.co.uk"
+    
+module:
+  mounts:
+    - source: 'node_modules/lucide-static'
+      target: 'assets'
+    - source: 'assets'
+      target: 'assets'    
+
+build:
+  buildStats:
+    enable: true
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+    renderer:
+      unsafe: true   
+
+menus:
+  main:
+    - name: 'Home'
+      pageRef: '/'
+      weight: 10
+    - name: 'Insights'
+      pageRef: '/insights'
+      weight: 20
+    - name: "Case Studies"
+      pageRef: '/case_studies'
+      weight: 30
+    - name: "About Us"
+      weight: 50
+    - name: "Team"
+      parent: 'About Us'
+      pageRef: '/team'
+      weight: 10
+  footer:
+    - name: 'Terms'
+      pageRef: '/terms'
+      weight: 10
+    - name: 'Privacy'
+      pageRef: '/privacy'
+      weight: 20
