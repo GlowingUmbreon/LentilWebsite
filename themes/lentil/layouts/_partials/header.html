@@ -1,6 +1,7 @@
 <div>
     {{ with resources.Get "logo.svg" }}
-        <img src="{{ .RelPermalink }}" fetchPriority="high" width="30" height="11" alt="{{ site.Title }} Logo">
+            {{ .Content | safeHTML }}
+        <!--<img src="{{ .RelPermalink }}" fetchPriority="high" width="30" height="11" alt="{{ site.Title }} Logo">-->
     {{ end }}
     {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 </div>

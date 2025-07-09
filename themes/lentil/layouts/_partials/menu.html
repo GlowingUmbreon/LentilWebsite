@@ -21,6 +21,38 @@ Renders a menu for the given menu ID.
 {{- define "_partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+    <li>
+      {{ if .HasChildren }}
+        <button popovertarget="mypopover">{{ $name }}{{ with resources.Get "icons/chevron-down.svg"}}
+            {{ .Content | safeHTML }}
+        {{ end }}</button>
+        <div id="mypopover" popover>
+          <div>
+            {{ range .Children }}
+              <a href="{{.URL}}">{{ $name }}</a>
+            {{- end }}
+          </div>
+          <div></div>
+        </div>
+      {{- else}}
+            <a class="button" href="{{.URL}}">{{ $name }}</a>
+      {{- end }}
+    </li>
+  {{- end }}
+{{- end }}
+
+
+
+<!--
+{{- define "_partials/inline/menu/walaaak.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
     {{- $attrs := dict "href" .URL }}
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
@@ -48,4 +80,4 @@ Renders a menu for the given menu ID.
       {{- end }}
     </li>
   {{- end }}
-{{- end }}
+{{- end }}-->

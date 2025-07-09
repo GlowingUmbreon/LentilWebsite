@@ -4,4 +4,17 @@
 Andromida, Mily Way<br>
 AB1 C23
 </p>
+  <!-- Temp Debug, delete me -->
+  <script>
+    function changeColor() {
+      colors = ["flamingo", "pink", "red", "coral", "mahogany", "apricot", "bronze", "orange", "amber", "mustard", "yellow", "turmeric", "pear", "avocado", "lime", "green", "emerald", "aquamarine", "turquoise", "cyan", "electric-blue", "pelorus", "sky", "cerulean", "steel", "azure", "blue", "neon", "iris", "lavender", "violet", "purple", "fuchsia", "orchid", "byzantium", "mulberry"];
+      //new_color = colors[(colors.indexOf(document.documentElement.classList[0])) % colors.length];
+      new_color = colors[Math.floor(Math.random() * colors.length)];
+      document.documentElement.classList = new_color;
+      document.getElementById("current_color").innerHTML = new_color;
+    }
+  </script>
+  <a href="javascript:changeColor()">Random Color</a>
+  <span id="current_color">Color</span>
+  <!---->
 </div>

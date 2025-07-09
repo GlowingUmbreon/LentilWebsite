@@ -57,6 +57,10 @@ menus:
       parent: 'About Us'
       pageRef: '/team'
       weight: 10
+    - name: "Team2"
+      parent: 'About Us'
+      pageRef: '/team'
+      weight: 10
   footer:
     - name: 'Terms'
       pageRef: '/terms'

@@ -1,11 +1,8 @@
-<div class="split">
-    <div>
-        <p>{{.Get "head"}}</p>
-        <p>{{.Get "subhead"}}</p>
-    </div>
-    <div>
-        {{ with resources.Get "images/hero.avif" }}
-            <img src="{{ .RelPermalink }}" fetchPriority="high" width="" height="" alt="{{ site.Title }} Logo">
-        {{ end }}
-    </div>
+{{$head := .Get "head"}}
+{{$head2 := .Get "head2"}}
+{{$subhead := .Get "subhead"}}
+
+<div class="hero">
+    <div>{{$head}}<br><span>{{$head2}}</span></div>
+    <div>{{$subhead}}</space>
 </div>

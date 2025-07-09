@@ -1,3 +1,7 @@
+/* ! 
+Copyright 2025 
+*/
+
 :root {
     background-color: white;
     background-image: linear-gradient(var(--color-200) 3em, white 20em);
@@ -8,7 +12,8 @@
     --max-width: 1440px;
     --padding: 1rem;
     --shadow: drop-shadow(-2px 2px 5px #000000aa);
-    --shadow2: drop-shadow(-5px 5px 7px #00000099)
+    --shadow2: drop-shadow(-5px 5px 7px #00000099);
+    --shadow3: drop-shadow(-7px 5px 7px #00000099);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -27,28 +32,14 @@ header {
     top: 0;
     z-index: 100;
     background-color: white;
-    border-bottom: solid var(--color-400) 1px;
-    margin-bottom: 1em;
-    height: 3em;
+    margin-bottom: 1rem;
+    height: 3rem;
 
     filter: var(--shadow);
 
-    :link {
-        color: blue;
-    }
-
-    :visited {
-        color: green;
-    }
-
-    /* This is currently not implemented in any browsers */
-    :local-link {
-        color: red !important;
-    }
-
     padding: 0 var(--padding);
 
-    div {
+    > div {
         display: flex;
         justify-content: space-between;
         height: 100%;
@@ -57,7 +48,7 @@ header {
         margin-left: auto;
         margin-right: auto;
 
-        img {
+        svg {
             height: 100%;
             width: auto;
         }
@@ -66,12 +57,12 @@ header {
             ul {
                 list-style-type: none;
                 padding: 0;
+                margin: 0;
 
                 li {
                     color: var(--color-600);
                     display: inline-block;
-                    margin-left: 2em;
-                    font-size: large;
+                    margin-left: 2rem;
 
                     li {
                         display: none;
@@ -82,12 +73,84 @@ header {
     }
 }
 
-main {
+button,
+.button {
+    background-color: var(--color-500);
+    color: var(--color-100);
+    border-radius: .5rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: small;
 
+    &:hover {
+        background-color: var(--color-600);
+    }
+
+    &:active {
+        background-color: var(--color-700);
+    }
+
+    &[inverted] {
+        background-color: var(--color-100);
+        color: var(--color-600);
+        &:hover {
+            background-color: var(--color-200);
+        }
+        &:active {
+            background-color: var(--color-300);
+        }
+    }
+
+    >svg {
+        height: 1em;
+        width: 1em;
+        vertical-align: middle;
+    }
+
+}
+/* a element made to look like a button */
+a, .button {
+    text-decoration-line: none;
+}
+
+main {}
+
+div[popover] {
+    width: 100%;
+    margin: 3rem 0 0 0;
+    padding: 0;
+    padding-bottom: 10px;
+    display: none;
+    border: none;
+    background-color: transparent;
+
+    /* Contents */
+    > div:nth-child(1) {
+        background-color: white;
+        width: 100%;
+        margin-bottom: 10px;
+        min-height: 10rem;
+        position:relative;
+        z-index: 1;
+    };
+
+    /* Fake Shadow */
+    > div:nth-child(2) {
+        background-color: white;
+        width: 100%;
+        height: 10px;
+        bottom: 10px;
+        position: absolute;
+        filter: var(--shadow);
+    };
+
+    & :popover-open {
+        display: block;
+    }
 }
 
 footer {
-    /*margin-top: 2em;*/
+    /*margin-top: 2rem;*/
     background-color: var(--color-100);
 
     div {
@@ -102,21 +165,49 @@ footer {
 section {
     padding: 5rem var(--padding);
 
-    > div {
+    >div {
         max-width: var(--max-width);
         margin: auto;
     }
 }
 
-.split {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    flex-wrap: wrap;
+h1 {
+    font-size: xx-large;
+}
 
+h2 {
+    font-size: x-large;
+}
 
-    div {
-        display: inline-flex;
+h3 {
+    font-size: larger;
+}
+
+h4 {
+    font-size: large
+}
+
+h5 {
+    font-size: medium;
+}
+
+.hero {
+    text-align: center;
+
+    > :nth-child(1) {
+        font-size: xxx-large;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        span {
+            color: var(--color-500)
+        }
+    }
+
+    > :nth-child(2) {
+        margin: auto;
+        font-size: larger;
+        width: 50%
     }
 }
 
@@ -176,9 +267,9 @@ section {
 
     > :nth-child(1) {
         padding: 16px;
-        background-color: var(--color-200);
+        background-color: var(--color-500);
         border-radius: 8px;
-        color: var(--color-500);
+        color: var(--color-100);
         justify-content: center;
         align-content: center;
         width: 2rem;
@@ -205,4 +296,8 @@ section {
     display: flex;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
+
+    >.card {
+        width: 100%;
+    }
 }
